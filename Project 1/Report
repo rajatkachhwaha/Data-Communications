@@ -1,0 +1,22 @@
+I Implemented a webclient and webserver which supports GET and PUT method.
+My programming IDE was eclipse: http://www.eclipse.org and my program consists of 2 .java files namely webserver.java and webclient.java
+webClient: It is a very simple HTTP client, which takes the GET/PUT requests and send the request to the server and prints the response.
+The Steps Followed is:
+1.	Get the command-line parameters: host, port, GET/PUT and file name.
+2.	Connect to the server via a connection-oriented socket.
+3.	Submit a valid GET/PUT request.
+4.	Read the server's response and display it.
+WebServer: It is a very simple HTTP (web) server. It’s a multi threaded server. I implemented it with two classes, and it supports only the GET and PUT commands for HTML, text, GIF, and JPEG files.
+1.	The Steps Followed are:
+2.	Get the command-line parameters: port. If the port is not specified, set it to 80. 
+3.	Open a server socket on the specified port. 
+4.	Begin loop. 
+a.	Wait for client connection, getting a reference to the client socket when the connection is received. 
+b.	Create and start a new request thread, passing it the client socket.
+5.	 Get references to the socket input and output streams. 
+6.	Print the request information. 
+7.	If the command was "GET", send the response. If the file is found, it it is included as the content of the response. If it is not found, send "404 Not Found". 
+8.	If the command was “PUT”, it will save the file. If the received file from client is created for the first time, the server sends back a "Created 201" response to the client. If an existing file is modified, the server sends back a "OK 200" response to the client.
+9.	End loop. 
+10.	Close the server socket and exit. 
+
